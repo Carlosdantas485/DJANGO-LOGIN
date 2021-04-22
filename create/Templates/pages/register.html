@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} register {% endblock %}
+
+{% block content %}
+    
+<div class="box-register">
+        <h1>register</h1>
+        <input class="input-register" type="text" placeholder="Name" required>
+        <select name="sex" class="form-item" id="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+        </select>
+        <input class="input-register-date" type="date" required>
+        <input class="input-register" type="text" placeholder="E-mail" required>
+        <div class="together">
+                <input class="input-register-together" type="text" placeholder="Phone" required>
+                <input class="input-register-uf" type="text" placeholder="UF" maxlength="2" required>         
+        </div>
+        <input class="input-register" type="password" placeholder="Password" required>
+        <input class="input-register" type="password" placeholder="Confirm Password" required>
+       
+        <!-- verificação de robo <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div> -->
+        
+        <button class="button-register-submit" type="submit">SUBMIT</button>
+        
+</div>
+       
+
+{% endblock %}
+   
+   

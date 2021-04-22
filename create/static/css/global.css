@@ -1,0 +1,287 @@
+
+.body{
+    background-color: rgb(121, 161, 204);
+}
+
+h1{
+    color: white;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.heart {
+    color: red;
+    font-size: 50px;
+    animation: heart-pulse 2s infinite ease-out;
+}
+
+.pulse{
+    animation: pulse 3s infinite ;
+}
+  
+@keyframes heart-pulse {
+    0% {
+        transform: scale(0.20);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(0.20);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(0.90);
+    }
+}
+  
+.master{
+    color:white;
+    font-weight: bold;
+    float:right;
+
+}
+
+/*NAVBAR*/
+
+.navbar{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.navbar-nav{
+    margin: auto;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav a.navbar-link{
+    color: black;
+    letter-spacing: 1px;
+}
+
+.navegation-button{
+    background-color: rgb(27, 219, 129);
+    width:100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgb(64, 165, 224);
+}
+
+.navegation-button:hover{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* next page register */
+
+.fas.fa-search{
+    position: absolute;
+    top: 12px;
+    right: 26px;
+}
+
+.search-div{
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+
+}
+
+.list-div{
+    padding: 0;
+}
+
+li{
+    padding: 5px;
+    font-weight: bold;
+}
+
+.task-list{
+    padding-left: 0;
+}
+
+.task-item{
+    margin-top: 5px;
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.fas.fa-trash, .fas.fa-edit{
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float:right;
+}
+
+.fas.fa-trash{
+    color: red;
+}
+
+.fas.fa-edit{
+    color: green;
+}
+
+/* NEXT PAGE login*/
+
+.box-login{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.input-login{
+    margin-top: 5px;
+    width: 400px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+/* ativar verificarção de robo */
+
+/* .g-recaptcha{
+    margin-top: 10px;
+} */
+
+.button-login{
+    width: 100px;
+    margin: 10px;
+    outline: none;
+    background-color: white;
+    color: rgb(0, 119, 255);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px grey;
+    border: none;
+}
+
+.button-login:hover{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* next page register*/
+
+.box-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-register{
+    width: 400px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+.input-register-together{
+    width: 310px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+.input-register-uf{
+    width: 85px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+#sex{
+    width: 400px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+.input-register-date{
+    width: 400px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+
+}
+
+.button-register-submit{
+    width: 100px;
+    margin: 10px;
+    outline: none;
+    background-color: white;
+    color: rgb(0, 119, 255);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px 1px grey;
+}
+
+.button-register-submit:hover{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* footer */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 219, 129);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p{
+    color: rgb(255, 255, 255);  
+}
