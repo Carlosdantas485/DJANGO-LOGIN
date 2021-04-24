@@ -1,20 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %} REGISTER {% endblock %}
+{% block title %} EDIDT {% endblock %}
 
 {% block content %}
     
 <div class="box-register">
-        <h1>REGISTER</h1>
+        <h1>EDIT LOGIN " {{Login.name}} "</h1>
         <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="button-register-submit" type="submit" value="Submit Account">SUBMIT</button>
+                <button class="button-register-submit" type="submit" value="Submit Edit">SUBMIT</button>
         </form>
        
         <!-- verificação de robo <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div> -->
-</div>
-       
+</div> 
 
 {% endblock %}
    

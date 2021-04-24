@@ -8,7 +8,11 @@ class login (models.Model):
     )
 
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    email = models.CharField(max_length=255, default='')
+    phone = models.CharField(max_length=255, default='')
+    password01 = models.CharField(max_length=255, default='')
+    password02 = models.CharField(max_length=255, default='')
+    
     done = models.CharField(
         max_length=5,
         choices=STATUS,

@@ -1,24 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %} Account {% endblock %}
+{% block title %} ACCOUNT {% endblock %}
 
 {% block content %}
     <div class="affset-1 col-10 list-div">
-        <h1>Accounts List</h1>
-        <div class="col-2 add-div">
-        </div>
-
-        <div class="col-9 search-div">
-            <input class="form-control" type="text" id="search" name="search" placeholder="Search accounts here !">
-            <i class="fas fa-search"></i>
-        </div>
-        <ul class="task-list">
-            {% for user in Login %}
-                <li class="task-item">
-                    <span><a href="/accounts/{{user.id}}">{{user.name}}</a></span>
-                </li>
-            {% endfor %}
-        </ul>
+        <h1>NOME: {{Login.name}}</h1>
+        <p>E-MAIL: {{Login.email}}</p>
+        <p>PHONE: {{Login.phone}}</p>
     </div>
    
 {% endblock %}
