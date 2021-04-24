@@ -15,14 +15,47 @@
         <ul class="task-list">
             {% for user in Login %}
                 <li class="task-item">
-                    <span><a href="login/{{user.id}}">{{user.name}}</a></span>
+                    <span><a href="login/{{user.id}}" id="link-item">{{user.name}}</a></span>
                     <a href="edit/{{user.id}}"><span><i class="fas fa-edit"></i></span></a>
-                    <a href="delet/{{user.id}}"><span><i class="fas fa-trash"></i></span></a>
+                    <span id="myBtn"><i class="fas fa-trash"></i></span>
+    
+                        <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>do you really want to delete this account?</p>
+                            <div class="options-delete">
+                                <button class="button-modal-yes">Yes</button>
+                                <button class="button-modal-no">No</button>
+                            </div>
+                        </div>
+
+        
                 </li>
             {% endfor %}
         </ul>
+        <script>
+            var modal = document.getElementById("myModal");
+
+            var btn = document.getElementById("myBtn");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script>
     </div>
    
 {% endblock %}
-   
-   
+
