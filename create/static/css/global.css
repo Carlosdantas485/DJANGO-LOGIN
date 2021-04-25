@@ -7,6 +7,8 @@ h1{
     color: white;
 }
 
+
+
 .center {
     display: flex;
     justify-content: space-evenly;
@@ -28,6 +30,11 @@ h1{
     font-weight: bold;
     float:right;
 }
+
+.logo{
+    width: 50px;
+}
+
 
 /*NAVBAR*/
 
@@ -67,7 +74,38 @@ h1{
     transition: 0.5s;
 }
 
+#btn-exit{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border:none;
+}
+
+#btn-create-account{
+    margin-left: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border:none;
+}
+
 /* next page acounts */
+
+.box-creat-task{
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: rgb(19, 200, 255);
+    border: none;
+}
+
+#btn-idea{
+    background-color: transparent;
+}
 
 .fas.fa-search{
     position: absolute;
@@ -365,3 +403,4 @@ li{
     text-decoration: none;
     cursor: pointer;
   }
+
