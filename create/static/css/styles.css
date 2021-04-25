@@ -1,0 +1,254 @@
+.body {
+    background-color: rgb(121, 140, 180);
+}
+
+.nav-link{
+    padding: 0;
+}
+
+.container{
+    margin-top: 25px;
+}
+
+.navegation{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    font-weight: bold;
+}
+
+.logo{
+    width:40px;
+}
+
+h1{
+    color: white;
+}
+/* button create account */
+
+#btn-create-account{
+    background-color: rgb(0, 171, 223);
+    color: white;
+    padding: 5px;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;  
+}
+
+#btn-create-account:hover{
+    background-color: rgb(1, 100, 192);
+    color: white;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* button exit */
+
+#btn-exit-account{
+    width: 100px;
+    background-color: salmon;
+    color: white;
+    padding: 5px;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;  
+}
+
+#btn-exit-account:hover{
+    background-color: red;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* button create idea */
+
+.button{
+    position:relative;
+    display:inline-block;
+    margin-bottom:20px;
+  }
+  
+  .button a{
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding:10px 10px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+.button a:hover{
+    background-color:#cf7b15;
+}
+
+.button a:active{
+    top:10px;
+    background-color:#F78900;
+
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* itens idea */
+
+.item{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    list-style:none;
+}
+
+#link-item{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* footer */
+.heart {
+    color: red;
+    font-size: 50px;
+    animation: heart-pulse 2s infinite ease-out;
+}
+
+.pulse{
+    animation: pulse 3s infinite ;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:25px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 11, 58);
+}
+
+.footer a{
+    color: rgb(255, 255, 255);  
+}
+
+.iframe{
+    margin: 10px;
+    height: 200px;
+}
+.creator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-creator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    color: white;
+    font-weight: bold;
+}
+
+.info-creator{
+    border:2px dashed white;
+    padding: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+    
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+@keyframes heart-pulse {
+    0% {
+        transform: scale(0.20);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(0.20);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(0.90);
+    }
+}
+
+
+

@@ -3,24 +3,21 @@
 {% block title %} Account {% endblock %}
 
 {% block content %}
-    <div class="">
-        
+    <div class="navgation">
         <h1 class="pulse">WELCOME !</h1>
-        <div class="box-creat-task">
-            <div class="col-9 search-div">
-                <input class="form-control" type="text" id="search" name="search" placeholder="Search ideas here !">
-                <i class="fas fa-search"></i>
-            </div>
-            <a href="/register"><button type="submit" id="btn-create-account" class="btn btn-primary">CREATE NEW IDEA</button></a>
-
-        </div>
-        
         <ul class="task-list">
+            <div ontouchstart="">
+                <div class="button">
+                    <a href="/register" ></button>CREATE NEW IDEA</button></a>
+                </div>
+            </div>
             {% for user in Login %}
-                <li class="task-item">
+                <li class="item">
                     <span><a href="login/{{user.id}}" id="link-item">{{user.name}}</a></span>
-                    <a href="edit/{{user.id}}"><span><i class="fas fa-edit"></i></span></a>
-                    <span id="myBtn"><i class="fas fa-trash"></i></span>
+                    <div>
+                        <a href="edit/{{user.id}}"><span><i class="fas fa-edit"></i></span></a>
+                        <span id="myBtn"><i class="fas fa-trash"></i></span>
+                    </div>
     
                     <div id="myModal" class="modal">
                         <div class="modal-content">

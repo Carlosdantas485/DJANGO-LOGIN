@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     
     <script src="https://kit.fontawesome.com/ad28c48cc2.js" crossorigin="anonymous"></script>
-    <!-- verificação de robo <script src='https://www.google.com/recaptcha/api.js'></script> -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{% static 'css/global.css' %}">
-
- 
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
 <body class="body">  
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -26,23 +26,22 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div id="nevegation" class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="/">Ideas</a>
+                <a class="nav-link" href="/">IDEAS</a>
               </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="/accounts/login">HOME</a>
+                <a class="nav-link" href="/">HOME</a>
               </li>
               {% endif %}
             </ul>
             {% if user.is_authenticated %}
-            <a class="nav-link nav-option" id="btn-exit"href="/accounts/logout">EXIT</a> 
-            
+                <a href="/accounts/logout"><button id="btn-exit-account">EXIT</button></a>
             {% else %}
-            <a class="nav-link nav-option" id="btn-create-account" href="/accounts/register">CREATE ACCOUNT</a>
+              <a href="/accounts/register"><button id="btn-create-account"> CREATE ACCOUNT</button></a>
             {% endif %}
           </div>  
         </div>
@@ -57,7 +56,20 @@
 
 </body>
 <footer class="footer"> 
-  <i class="fa fa-heart heart" aria-hidden="true"></i>  
-  <a  href="https://www.linkedin.com/in/carlos-alberto-dantas-filho-a10257195/" target="_blank" class="master">CREATED BY CARLOS DANTAS</a>
+  <div class="creator">
+    <i class="fa fa-heart heart" aria-hidden="true"></i>  
+    <a  href="https://www.linkedin.com/in/carlos-alberto-dantas-filho-a10257195/" target="_blank" class="master">CREATED BY CARLOS DANTAS</a>
+  </div>
+  <div class="contacts-creator">
+    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.3552332503864!2d-46.83163903553932!3d-23.699005222573625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfad2de2b15d95%3A0x2d8bb2ef03903182!2sJardim%20Europa%2C%20Itapecerica%20da%20Serra%20-%20State%20of%20S%C3%A3o%20Paulo%2C%2006855-410!5e0!3m2!1sen!2sbr!4v1619374611423!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="info-creator">
+      <h4>CONTACTS:</h4>
+      <a href="https://github.com/Carlosdantas485">Github</a>
+      <p>E-mail: carlosdantas485@gmail.com</p>
+      <p>Phone: (11) 98350-2027</p>
+      <p>Fix: (11) 4666-8895 </p>
+    </div>
+    
+  </div>
 </footer>
 </html>

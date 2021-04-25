@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %} ACCOUNT {% endblock %}
+{% block title %} INFO USER {% endblock %}
 
 {% block content %}
-    <div class="affset-1 col-10 list-div">
-        <h1>NOME: {{user.name}}</h1>
-        <p>E-MAIL: {{user.email}}</p>
-        <p>PHONE: {{user.phone}}</p>
-    </div>
+<div calss="box-idea">
+    <h1 class="name-user-info">NOME: {{user.name}}</h1>
+    <p class="text-info-user">E-MAIL: {{user.email}}</p>
+    <p class="text-info-user">PHONE: {{user.phone}}</p>
+</div>
    
 {% endblock %}
    

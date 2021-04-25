@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} EDIT {% endblock %}
+{% block title %} Create account{% endblock %}
 
 {% block content %}
-    
-<div class="box-register">
-        <h1>EDIT LOGIN " {{user.name}} "</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button class="button-register-submit" type="submit" value="Submit Edit">SUBMIT</button>
-        </form>
-       
-        <!-- verificação de robo <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div> -->
-</div> 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card auth-card">
+            <div class="card-body">
+                <h4 class="card-title text-center">EDIT IDEA</h4>
 
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+
+                    {{form|crispy}}
+                    <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+                </form>
+            </div>  
+        </div>
+    </div>
+   
+  </div>
+ 
 {% endblock %}
-   
-   
+
