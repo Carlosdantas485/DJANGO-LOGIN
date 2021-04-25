@@ -3,11 +3,18 @@
 {% block title %} INFO USER {% endblock %}
 
 {% block content %}
-<div calss="box-idea">
-    <h1 class="name-user-info">NOME: {{user.name}}</h1>
-    <p class="text-info-user">E-MAIL: {{user.email}}</p>
-    <p class="text-info-user">PHONE: {{user.phone}}</p>
-</div>
+
+    <div id="box-idea">
+        <img  class="img-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgUNaoFwOOa3sOnMoc8CVUJ65bhS822etxVQ&usqp=CAU" alt="">
+        <h1 class="info-item">Name: {{user.name}}</h1>
+        <p class="info-item">E-mail: {{user.email}}</p>
+        <p class="info-item"> Phone: {{user.phone}}</p>
+    </div>
+    <style>
+        .box-idea{
+            background-color: white;
+        }
+    </style>
    
 {% endblock %}
    

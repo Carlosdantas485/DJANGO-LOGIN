@@ -39,9 +39,9 @@
               {% endif %}
             </ul>
             {% if user.is_authenticated %}
-                <a href="/accounts/logout"><button id="btn-exit-account">EXIT</button></a>
+              <a href="/accounts/logout"><button id="btn-exit-account" class="button"><span>EXIT</span></button></a>
             {% else %}
-              <a href="/accounts/register"><button id="btn-create-account"> CREATE ACCOUNT</button></a>
+              <a href="/accounts/register"><button type="submit" id="btn-exit-account" class="button-submit"><span>CREATE ACCOUNT</span></button></a>
             {% endif %}
           </div>  
         </div>

@@ -9,8 +9,8 @@
             <h1>LOGIN</h1>
             <form method="post">
                 {% csrf_token %}
-                <input type="text" name="next">
-                <input type="password" name="next">
+                <input type="text" id="input" name="next">
+                <input type="password" id="input" name="next">
                 
                 {{ form|crispy }}
                 <button type="submit" class="button-submit-login">ENTER</button>

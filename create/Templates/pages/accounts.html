@@ -7,13 +7,25 @@
         <h1 class="pulse">WELCOME !</h1>
         <ul class="task-list">
             <div ontouchstart="">
-                <div class="button">
-                    <a href="/register" ></button>CREATE NEW IDEA</button></a>
-                </div>
+                <div class="button-creat-idea">
+                    <div class="center-btn">
+                        <a href="/register">
+                            <button class="btn">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span>CREATE NEW IDEA</span>
+                            </button>
+                        </a>
+                      </div>
             </div>
             {% for user in Login %}
                 <li class="item">
-                    <span><a href="login/{{user.id}}" id="link-item">{{user.name}}</a></span>
+
+                    <span><a href="login/{{user.id}}" id="link-item">
+                        <img class="mini-img-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgUNaoFwOOa3sOnMoc8CVUJ65bhS822etxVQ&usqp=CAU" alt="">
+                        {{user.name}}</a></span>
                     <div>
                         <a href="edit/{{user.id}}"><span><i class="fas fa-edit"></i></span></a>
                         <span id="myBtn"><i class="fas fa-trash"></i></span>
@@ -22,7 +34,8 @@
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span class="close"></span>
-                            <p>do you really want to delete this account?</p>
+                            <p>DELET: " {{user.name}} "</p>
+                            <p>Do you really want to delete this account?</p>
                             <div class="options-delete">
                                 <a href="delete/{{user.id}}"><button class="button-modal-yes">Yes</button></a>
                                 <a href="/"><button class="button-modal-no">No</button></a>

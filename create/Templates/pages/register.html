@@ -10,11 +10,11 @@
                 <h4 class="card-title text-center">CREAT IDEA</h4>
 
                 <form method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="next" value="{{ next }}">
+                  {% csrf_token %}
+                  <input type="hidden" name="next" value="{{ next }}">
 
-                    {{form|crispy}}
-                    <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+                  {{form|crispy}}
+                  <button type="submit" id="btn-exit-account" class="button-submit"><span>SUBMIT</span></button>
                 </form>
             </div>  
         </div>
