@@ -4,14 +4,18 @@
 
 {% block content %}
     <div class="">
-        <h1>Accounts List</h1>
+        
+        <h1 class="pulse">WELCOME {{ name }}!</h1>
         <div class="col-2 add-div">
         </div>
-
-        <div class="col-9 search-div">
-            <input class="form-control" type="text" id="search" name="search" placeholder="Search accounts here !">
-            <i class="fas fa-search"></i>
+        <div class="box-creat-task">
+            <a href="/register"><button type="submit" class="btn">CREATE NEW TESK</button></a>
+            <div class="col-9 search-div">
+                <input class="form-control" type="text" id="search" name="search" placeholder="Search accounts here !">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
+        
         <ul class="task-list">
             {% for user in Login %}
                 <li class="task-item">
@@ -19,18 +23,16 @@
                     <a href="edit/{{user.id}}"><span><i class="fas fa-edit"></i></span></a>
                     <span id="myBtn"><i class="fas fa-trash"></i></span>
     
-                        <div id="myModal" class="modal">
+                    <div id="myModal" class="modal">
 
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>do you really want to delete this account?</p>
-                            <div class="options-delete">
-                                <button class="button-modal-yes">Yes</button>
-                                <button class="button-modal-no">No</button>
-                            </div>
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>do you really want to delete this account?</p>
+                        <div class="options-delete">
+                            <a href="delete/{{user.id}}"><button class="button-modal-yes">Yes</button></a>
+                            <a href="accounts"><button class="button-modal-no">No</button></a>
                         </div>
-
-        
+                    </div>
                 </li>
             {% endfor %}
         </ul>

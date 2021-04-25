@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
-
-{% block title %} register {% endblock %}
+{% load crispy_forms_tags %}
+{% block title %} Account {% endblock %}
 
 {% block content %}
+    <div class="">
+        
+        <div class="box-login">
+            <h1>LOGIN</h1>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="next">
+                <input type="password" name="next">
+                
+                {{ form|crispy }}
+                <button type="submit" class="button-submit-login">ENTER</button>
 
-    <div class="box-login">
-        <h1>LOGIN</h1>
-        <input class="input-login" type="text" placeholder="USERNAME">
-        <input class="input-login" type="password" placeholder="PASSWORD">
-        <!-- verificação de robo <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div> -->
-        <button class="button-login" type="submit">ENTER</button>
+            </form>
+            <button class="button-login" type="submit">ENTER</button>
+        </div>
     </div>
-   
+ 
 {% endblock %}
+
