@@ -16,7 +16,7 @@ def accounts(request):
     return render(request, 'pages/accounts.html', {'Login': Login_list})
 
 @login_required
-def loginView(request, id):
+def ideaView(request, id):
     user = get_object_or_404(login, pk=id)
     return render(request, 'pages/InfoUser.html', {'user': user})
 

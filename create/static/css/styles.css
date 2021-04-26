@@ -2,6 +2,7 @@
 
 .body {
     background-color: rgb(0, 171, 223);
+
 }
 
 .nav-link{
@@ -27,6 +28,13 @@ a{
 
 h1{
     color: white;
+}
+
+/* navegation site */
+
+#navegation-site{
+    background-color: white;
+    display: flex;
 }
 
 
@@ -186,6 +194,8 @@ h1{
     background-color: white;
     list-style:none;
     color: black;
+    border: 1px solid grey;  
+    box-shadow: 1px 1px 10px 1px grey;
 }
 
 .img-item{
@@ -194,8 +204,14 @@ h1{
 }
 
 .info-item{
+    display: flex;
+
+    flex-wrap: wrap;
+
     color: black;
 }
+
+
 /* buttons */
 
 .button {
@@ -376,3 +392,6 @@ svg {
     border:2px dashed white;
     padding: 10px;
 }
+
+
+
