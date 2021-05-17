@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 
-.body {
-    background-color: rgb(0, 171, 223);
-
-}
-
 .nav-link{
     padding: 0;
 }
@@ -26,17 +21,23 @@ a{
     width:40px;
 }
 
+.box-logo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 h1{
     color: white;
 }
 
 /* navegation site */
 
-#navegation-site{
-    background-color: white;
+.collapse{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-
 
 /* button create account */
 
@@ -58,7 +59,9 @@ h1{
 }
 
 /* itens idea */
-
+.task-list{
+    padding: 0;
+}
 .item{
     border: 1px solid grey;  
     margin-top: 10px;
@@ -191,7 +194,7 @@ h1{
     align-items: center;
     padding: 10px;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     list-style:none;
     color: black;
     border: 1px solid grey;  
@@ -308,7 +311,7 @@ form{
     width: 180px;
     height: 60px;
     cursor: pointer;
-    background: transparent;
+    background: rgb(138, 203, 247);
     border: 1px solid #91C9FF;
     outline: none;
     transition: 1s ease-in-out;
@@ -327,7 +330,7 @@ svg {
 
 .btn:hover {
     transition: 1s ease-in-out;
-    background: #4F95DA;
+    background: #3c89d6;
 }
 
 .btn:hover svg {
@@ -341,6 +344,18 @@ svg {
 }
 
 /* footer */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .heart {
     color: red;
     font-size: 50px;
@@ -352,20 +367,23 @@ svg {
 }
 
 .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:25px;
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(43, 51, 70);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color:white;  
 }
 
 .footer a{
-    color: rgb(255, 255, 255);  
+    color:white;  
 }
 
 .iframe{
@@ -384,7 +402,6 @@ svg {
     justify-content: center;
     flex-wrap: wrap;
     
-    color: white;
     font-weight: bold;
 }
 
